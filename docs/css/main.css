@@ -1,0 +1,36 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:0px;
+    padding:0px
+}
+body a{
+    text-decoration: none;
+}
+/**************header style******************/
+header{
+    padding: 0 20px;
+    height: 70px;
+    border-bottom: 3px solid dodgerblue;
+}
+header h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header li{
+    float:left;
+    list-style: none;
+    padding:0 10px;
+}
+/**************header style******************/
+.lightblue{
+    color:dodgerblue;
+}
+.fleft{
+    float:left
+}
+.fright{
+    float:right;
+}
+.fnone{
+    float:none;
+    clear: both;
+}
