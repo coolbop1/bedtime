@@ -14,10 +14,10 @@ header{
     border-bottom: 3px solid #031c57;
     position: relative;
 }
-header img{
+header h1{
     position: absolute;
     top:-5px;
-    left:-25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  }
 header li{
     float:left;
@@ -32,12 +32,26 @@ header  a{
 nav{
     margin-top:10px;
 }
-/**************header style******************/
+/*-------------------end header style-----------------------*/
 #list-category{
     height: 700px;
-    width: 20%;
-    border-right:1px solid #dfe2db;
+    width:calc(20% - 60px);
+    border-right:2px solid #dfe2db;
+    padding:0px 30px;
+    position: relative;
 }
+#categories{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:calc(100% + 2px);
+    background: #031c57;
+    color:#fff;
+    text-align: center;
+    font-weight: 800;
+    padding: 10px 0;
+}
+
 .lightblue{
     color:dodgerblue;
 }
@@ -50,4 +64,8 @@ nav{
 .fnone{
     float:none;
     clear: both;
+}
+.contrast{
+    background: #f1f1f1;
+    border: 1px solid #dfe2db;
 }
