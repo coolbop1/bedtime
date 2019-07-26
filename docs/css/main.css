@@ -10,21 +10,34 @@ body a{
 header{
     padding: 0 20px;
     height: 70px;
-    border-bottom: 3px solid dodgerblue;
+    background-color: #dfe2db;
+    border-bottom: 3px solid #031c57;
+    position: relative;
 }
-header h1{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+header img{
+    position: absolute;
+    top:-5px;
+    left:-25px;
+ }
 header li{
     float:left;
     list-style: none;
     padding:0 10px;
     text-transform: uppercase;
+    font-weight: 800;
+}
+header  a{
+    color: #111111;
 }
 nav{
     margin-top:10px;
 }
 /**************header style******************/
+#list-category{
+    height: 700px;
+    width: 20%;
+    border-right:1px solid #dfe2db;
+}
 .lightblue{
     color:dodgerblue;
 }
