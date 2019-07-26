@@ -19,6 +19,10 @@ header li{
     float:left;
     list-style: none;
     padding:0 10px;
+    text-transform: uppercase;
+}
+nav{
+    margin-top:10px;
 }
 /**************header style******************/
 .lightblue{
