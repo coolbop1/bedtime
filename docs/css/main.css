@@ -34,16 +34,17 @@ nav{
 }
 /*-------------------end header style-----------------------*/
 #list-category{
-    height: 700px;
+    min-height: 700px;
     width:calc(20% - 60px);
     border-right:2px solid #dfe2db;
-    padding:0px 30px;
+    padding:100px 30px;
     position: relative;
+    
 }
 #categories{
     position: absolute;
-    top:0px;
-    left:0px;
+    top:0;
+    left:0;
     width:calc(100% + 2px);
     background: #031c57;
     color:#fff;
@@ -68,4 +69,28 @@ nav{
 .contrast{
     background: #f1f1f1;
     border: 1px solid #dfe2db;
+    margin-bottom: 20px;
+    display: table;
+    vertical-align: middle;
+    width:100%;
+    font-weight: 500;
+    position: relative;
+}
+.arrowpoint{
+    top: 4px;
+    right:-12.2px;
+    width:25px;
+    height: 25px;
+    background: #f1f1f1;
+    border-top: 1px solid #dfe2db;
+    border-right: 1px solid #dfe2db;
+    position: absolute;
+    transform: rotate(45deg)
+}
+.contrast img{
+    margin-top:5px;
+}
+.contrast .cat{
+    display: table-cell;
+    vertical-align: middle;
 }
