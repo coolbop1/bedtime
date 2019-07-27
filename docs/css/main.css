@@ -36,6 +36,14 @@ header  a{
 nav{
     margin-top:10px;
 }
+li:hover a,.presenttab{
+    background: #031c57;
+    color:#fff;
+    border:0;
+    border-top:2px solid #fff;
+    border-bottom:2px solid #fff;    
+}
+    
 /*-------------------end header style-----------------------*/
 #list-category{
     width:calc(20% - 60px);
@@ -123,11 +131,4 @@ nav{
         color:#fff;
         border:0;
         }
-li:hover a,.presenttab{
-    background: #031c57;
-    color:#fff;
-    border:0;
-    border-top:2px solid #fff;
-    border-bottom:2px solid #fff;    
-}
-    
+
