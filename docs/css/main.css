@@ -1,3 +1,6 @@
+html{
+	text-rendering :optimizeLegibility;
+}
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin:0px;
@@ -34,7 +37,6 @@ nav{
 }
 /*-------------------end header style-----------------------*/
 #list-category{
-    min-height: 700px;
     width:calc(20% - 60px);
     border-right:2px solid #dfe2db;
     padding:100px 30px;
@@ -43,7 +45,7 @@ nav{
 }
 #categories{
     position: absolute;
-    top:0;
+    top:-2px;
     left:0;
     width:calc(100% + 2px);
     background: #031c57;
@@ -67,7 +69,18 @@ nav{
     clear: both;
 }
 .contrast{
-    background: #f1f1f1;
+    background: #dfe2db;
+    margin-bottom: 20px;
+    display: table;
+    vertical-align: middle;
+    width:100%;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    height: 30px;
+}
+.categorypick{
+    background: #031c57;
     border: 1px solid #dfe2db;
     margin-bottom: 20px;
     display: table;
@@ -75,22 +88,37 @@ nav{
     width:100%;
     font-weight: 500;
     position: relative;
+    cursor: pointer;
+    height: 30px;
 }
 .arrowpoint{
-    top: 4px;
-    right:-12.2px;
-    width:25px;
-    height: 25px;
-    background: #f1f1f1;
-    border-top: 1px solid #dfe2db;
-    border-right: 1px solid #dfe2db;
+    top: 4.5px;
+    right:-11.5px;
+    width:21.4px;
+    height: 21.4px;
+    background: #dfe2db;
     position: absolute;
     transform: rotate(45deg)
 }
-.contrast img{
-    margin-top:5px;
+.categorypick .cat{
+    display: table-cell;
+    vertical-align: middle;
+    color:#fff;
+    text-align: center;
 }
 .contrast .cat{
     display: table-cell;
     vertical-align: middle;
 }
+
+.contrast:hover .cat,.categorypick .cat{
+    text-align: center;
+    }
+.contrast:hover img ,.categorypick img{
+    display:none;
+    }
+.contrast:hover ,.contrast:hover .arrowpoint,.categorypick .arrowpoint{
+        background: #031c57;
+        color:#fff;
+        border:0;
+        }
