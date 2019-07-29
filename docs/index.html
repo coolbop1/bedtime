@@ -5,64 +5,361 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
+    	<link rel="stylesheet" href="css/responsive.css">
     <script src="js/client.js"></script>
-    <title> Welcome to scrib</title>
+    <script src="js/main.js"></script>
+    <title> Welcome to Scrib</title>
 
 </head>
 <body>
-    <header>
+    <header id="mainheader">
         <div id="logo">
-            <h1>SCR<img src="icons/png/edit.png" height="25px">B</h1>
+            <a href="index.html"><h1>SCR<img src="icons/png/edit.png" height="25px">B</h1></a>
         </div>
-        <nav class="fright">
-            <ul>
-                <li><a class="presenttab" href="#">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">signin</a></li>
-                <li><a href="#">signup</a></li>
+        <nav id="menulist" class="splace">
+            <ul id="ulist" class="splace">
+                <li><div onclick="opentab(this.id)" id="contenttab" class="presenttab nav" ><a  href="#">home</a></div></li>
+                <li><div onclick="opentab(this.id)" id="abouttab" class="splace nav"><a href="#">about</a></div></li>
+                <li><div onclick="opentab(this.id)" id="logintab" class="splace nav"><a href="#">signin</a></div></li>
+                <li><div onclick="opentab(this.id)" id="regtab" class="splace nav"><a href="#">signup</a></div></li>
             </ul>
         </nav>
+        <div class="big" onclick="opennav('small')" id="menu">
+        	<div id="fcros" class="cros"></div>
+        	<div id="mid" class=" mid"></div>
+        	<div id="scros" class="cro"></div>
+        </div>
         <div class="fnone"></div>
     </header>
-    <section id="list-category" class="fleft">
+    <section id="content" class="jumpin">
+    <div id="list-category" class="fleft">
         <div id="categories">
             NOVEL CATEGORIES
         </div>
         <div class="contrast">
-                <img src="icons/png/book.png" height="20px"> <div class="cat"> ADVENTURE </div><div class="arrowpoint"></div>
+                <input name="selcat" type="radio"> <div class="cat"> ADVENTURE </div><div class="arrowpoint"></div>
         </div>
         <div class="contrast">
-            <img src="icons/png/book.png" height="20px"> <div class="cat"> ROMANCE </div><div class="arrowpoint"></div>
+            <input name="selcat" type="radio"> <div class="cat"> ROMANCE </div><div class="arrowpoint"></div>
         </div>
         <div class="contrast">
-                <img src="icons/png/book.png" height="20px"> <div class="cat"> THRILLER </div><div class="arrowpoint"></div>
+                <input name="selcat" type="radio"> <div class="cat"> THRILLER </div><div class="arrowpoint"></div>
         </div>
         <div class="contrast">
-                <img src="icons/png/book.png" height="20px"> <div class="cat"> TRAGEDY </div><div class="arrowpoint"></div>
+                <input name="selcat" type="radio"> <div class="cat"> TRAGEDY </div><div class="arrowpoint"></div>
         </div>
         <div class="contrast">
-                <img src="icons/png/book.png" height="20px"> <div class="cat"> DRAMA </div><div class="arrowpoint"></div>
+                <input name="selcat" type="radio"> <div class="cat"> DRAMA </div><div class="arrowpoint"></div>
         </div>
         <div class="contrast">
-                <img src="icons/png/book.png" height="20px"> <div class="cat"> COMEDY </div><div class="arrowpoint"></div>
+                <input name="selcat" type="radio"> <div class="cat"> COMEDY </div><div class="arrowpoint"></div>
         </div>
         <div class="contrast">
-                <img src="icons/png/book.png" height="20px"> <div class="cat"> SHORT </div><div class="arrowpoint"></div>
+                <input name="selcat" type="radio"> <div class="cat"> SHORT </div><div class="arrowpoint"></div>
         </div>
         <div class="contrast">
-                <img src="icons/png/book.png" height="20px"> <div class="cat"> POETRY </div><div class="arrowpoint"></div>
+                <input name="selcat" type="radio"> <div class="cat"> POETRY </div><div class="arrowpoint"></div>
         </div>
         <div class="contrast">
-                <img src="icons/png/book.png" height="20px"> <div class="cat"> 18+ </div><div class="arrowpoint"></div>
+                <input name="selcat" type="radio"> <div class="cat"> 18+ </div><div class="arrowpoint"></div>
         </div>
 
-    </section>
-    <section id="theme" class="fright">
+    </div>
+    <div id="theme" class="fright">
         <h2>Public Shelf</h2>
-        <div id="mainswitch"><button class="fleft">EDUCATIONAL</button><button class="fleft">NON-EDUCATIONAL</button><div class="fnone"></div></div>
-    </section>
-    <footer class="fnone">
+        <div id="mainswitch"><button class="buttonedu fleft">SCHOOLS</button><button class="buttonebook fleft">SERVICES</button><div class="fnone"></div></div>
+        <div id="filt" class="fnone splace">
+        &nbsp; &nbsp; <a href="#"><img src="image/filter.png" width="20px"></a>
+        </div>
+        
+        <div id="collections">
+ <!--one book-->       	
+        	<div class="booksbox fleft">
+        		<center><div class="bookcover">
+<div class="bookover"></div>
+        			<img class="thumbimgs" src="image/cover/images1.jpeg" >
+        		</div></center>
+        		<div class="authorsplace">
+        			<a href="#">
+        			<div class="authorface fleft">
+        				<img src="image/default.png" class="thumbimg" >
+        			</div>
+        			<div class="authorname fleft"><span>Firstname Lastname</span></div>
+        			</a>
+        		</div>
+        		<div class="titlebar">
+        			<div>
+        			<span class="ttitle"><img src="icons/png/book.png" height="21px"> </span>
+        			<span class="ttitlez"> The title of the novel</span>
+        		</div>
+        		</div>
+        	</div>
+<!----->
 
+<!--one book-->       	
+        	<div class="booksbox fleft">
+        		<center><div class="bookcover">
+<div class="bookover"></div>
+        			<img class="thumbimgs" src="image/cover/images2.jpeg"/>
+        		</div></center>
+        		<div class="authorsplace">
+        			<a href="#">
+        			<div class="authorface fleft">
+        				<img src="image/default.png" class="thumbimg" >
+        			</div>
+        			<div class="authorname fleft"><span>Firstname Lastname</span></div>
+        			</a>
+        		</div>
+        		<div class="titlebar">
+        			<div>
+        			<span class="ttitle"><img src="icons/png/book.png" height="21px"> </span>
+        			<span class="ttitlez"> The title of the novel</span>
+        		</div>
+        		</div>
+        	</div>
+<!----->
+
+<!--one book-->       	
+        	<div class="booksbox fleft">
+        		<center><div class="bookcover">
+<div class="bookover"></div>
+        			<img class="thumbimgs" src="image/cover/images3.jpeg"/>
+        		</div></center>
+        		<div class="authorsplace">
+        			<a href="#">
+        			<div class="authorface fleft">
+        				<img src="image/default.png" class="thumbimg" >
+        			</div>
+        			<div class="authorname fleft"><span>Firstname Lastname</span></div>
+        			</a>
+        		</div>
+        		<div class="titlebar">
+        			<div>
+        			<span class="ttitle"><img src="icons/png/book.png" height="21px"> </span>
+        			<span class="ttitlez"> The title of the novel</span>
+        		</div>
+        		</div>
+        	</div>
+<!----->
+
+<!--one book-->       	
+        	<div class="booksbox fleft">
+        		<center><div class="bookcover">
+<div class="bookover"></div>
+        			<img class="thumbimgs" src="image/cover/images4.jpeg"/>
+        		</div></center>
+        		<div class="authorsplace">
+        			<a href="#">
+        			<div class="authorface fleft">
+        				<img src="image/default.png" class="thumbimg" >
+        			</div>
+        			<div class="authorname fleft"><span>Firstname Lastname</span></div>
+        			</a>
+        		</div>
+        		<div class="titlebar">
+        			<div>
+        			<span class="ttitle"><img src="icons/png/book.png" height="21px"> </span>
+        			<span class="ttitlez"> The title of the novel</span>
+        		</div>
+        		</div>
+        	</div>
+<!----->
+
+<!--one book-->       	
+        	<div class="booksbox fleft">
+        		<center><div class="bookcover">
+<div class="bookover"></div>
+        			<img class="thumbimgs" src="image/cover/images5.jpeg"/>
+        		</div></center>
+        		<div class="authorsplace">
+        			<a href="#">
+        			<div class="authorface fleft">
+        				<img src="image/default.png" class="thumbimg" >
+        			</div>
+        			<div class="authorname fleft"><span>Firstname Lastname</span></div>
+        			</a>
+        		</div>
+        		<div class="titlebar">
+        			<div>
+        			<span class="ttitle"><img src="icons/png/book.png" height="21px"> </span>
+        			<span class="ttitlez"> The title of the novel</span>
+        		</div>
+        		</div>
+        	</div>
+<!----->
+
+<!--one book-->       	
+        	<div class="booksbox fleft">
+        		<center><div class="bookcover">
+<div class="bookover"></div>
+        			<img class="thumbimgs" src="image/cover/images6.jpeg"/>
+        		</div></center>
+        		<div class="authorsplace">
+        			<a href="#">
+        			<div class="authorface fleft">
+        				<img src="image/default.png" class="thumbimg" >
+        			</div>
+        			<div class="authorname fleft"><span>Firstname Lastname</span></div>
+        			</a>
+        		</div>
+        		<div class="titlebar">
+        			<div>
+        			<span class="ttitle"><img src="icons/png/book.png" height="21px"> </span>
+        			<span class="ttitlez"> The title of the novel</span>
+        		</div>
+        		</div>
+        	</div>
+<!----->
+        	
+        	
+        	
+        	<div class="fnone">&nbsp;</div>
+        </div>
+        	
+    </div>
+    <div class="fnone">&nbsp;</div>
+    </section>
+    <!------end of home------>
+    
+    
+    
+    
+    
+    
+    
+    
+    <!------------about page----------->
+    <section id="about" class="jumpout">
+    	<div class="coverimg">
+    		<img src="image/ebooks.png" class="thumbimg">
+    	</div>
+    	<div class="covercontent">
+    		<div class="herotitle"><h2>About Us</h2></div>
+    		
+    	</div>
+    	
+    	
+    </section>
+    <!------------end about------------>
+    
+    
+    
+    
+    <!------------signin page----------->
+    <section id="login" class="jumpout">
+    	<div class="coverimg">
+    		<img src="image/ebooks.png" class="thumbimg">
+    	</div>
+    	<div class="covercontent">
+    		<div class="herotitle"><h2>Sign In</h2></div>
+    	</div>
+    	
+    	
+    	
+    </section>
+    <!------------end signin------------>
+    
+    
+    
+    
+    
+    <!------------reg page----------->
+    <section id="reg" class="jumpout">
+    	
+    			<div class="coverimg">
+    		<img src="image/ebooks.png" class="thumbimg">
+    	</div>
+    	<div class="covercontent">
+    		<div class="herotitle"><h2>Sign Up</h2></div>
+    			<div class="formcontain">
+    		<form>
+    			<div class="grouptwo">
+    				<div class="singleone">
+    					<label for="firstname">First name:</label><br/>
+    			<input class="userinput" type="text" placeholder="First Name" id="firstname" name="firstname">
+    				</div>
+    				<div class="singleone">
+    					<label for="lastname">Last name:</label><br/>
+    				<input class="userinput" type="text" id="lastname" placeholder="Last Name" name="lastname">
+    					</div>
+    				</div>
+    					<label>
+    						<input type="radio" value="male" id="male" name="gender">
+    							Male
+    					</label>
+    					<label>
+    						<input type="radio" value="female" id="female" name="gender">
+    							Female
+    					</label>
+    					
+    					<div class="grouptwo">
+    				<div class="singleone">
+    					<label for="country">Country:</label><br/>
+    					<select class="userinput" id="country" name="country">
+    						<option value="">choose country</option>
+    						<option value="nigeria">Nigeria</nigeria>
+    					</select>
+    					</div>
+    					<div class="singleone">
+    						<label for="phone">Phone:</label><br/>
+    					<input class="userinput" type="tel" id="phone" placeholder="+123456789" name="phone">
+    					</div>
+    					</div>
+    					<div class="grouptwo">
+    				<div class="singleone">
+    					<label for="email">Email:</label><br/>
+    					<input class="userinput" type="email" id="email" placeholder="Email" name="email">
+    						</div>
+    						<div class="singleone">
+    							<label for="email">Username:</label><br/>
+    						<input class="userinput" type="text" id="username" placeholder="Username" name="username">
+    							</div>
+    							</div>
+    							<div class="grouptwo">
+    				<div class="singleone">
+    					<label for="email">Password:</label><br/>
+    							<input class="userinput" type="password" id="password" placeholder="******" name="password">
+    								</div>
+    								<div class="singleone">
+    									<label for="email">Retype Password:</label><br/>
+    							<input class="userinput" type="password" id="passwords" placeholder="******" name="passwords">
+    								</div>
+    								</div>
+    								<br/>
+    								<div class="grouptwo">
+    				<div class="singleone">
+    					<label>Accept privacy policy <input type="checkbox" id="accept" name="accept" ></label>
+    					</div>
+    					<div class="singleone">
+    						<button>signin</button>
+    					</div>
+    					<div class="fnone"></div>
+    					</div>
+    					<div class="fnone"></div>
+    					
+    		</form>
+    	</div>
+    	</div>
+    
+    
+    
+    </section>
+    <!------------reg about------------>
+    
+    
+    
+    <footer class="fnone">
+    	<table>
+    		<tr>
+    		<td class="firsttd">Quick Links</td>
+    		</tr>
+    		<tr>
+    			<td><a href="">PRIVACY POLICIES</a></td>
+    			<td><a href="#">CONTACT US</a></td>
+    		</tr>
+    		<div id="footer"> <span>&copy; www.scrib.com.ng</span>
+    		</div>
+    	</table>
     </footer>
 </body>
 </html>

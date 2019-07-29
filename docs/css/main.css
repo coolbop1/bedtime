@@ -13,6 +13,7 @@ body a{
 header{
     padding: 0 20px;
     height: 70px;
+    transition: .6s height;
     background-color: #dfe2db;
     border-bottom: 3px solid #031c57;
     position: relative;
@@ -25,23 +26,99 @@ header h1{
 header li{
     float:left;
     list-style: none;
+    	background:inherit;
+			transition: 1s background;
     padding:0 10px;
     text-transform: uppercase;
     font-weight: 800;
 }
-header  a{
-    color: #111111;
-    padding: 20px 10px;
+.listout{
+	width:95%;
+	margin:0 calc(2.5% - 15px);
+	padding:0;
+}
+.listout li{
+	width:100%;
+	float:none;
+	clear:both;
+	background:inherit;
+	transition: 1s background;
+	padding:10px 0px;
+	text-align:center;
+}
+header  .nav{
+    padding: 10px 10px;
+}
+header a{
+	color:#111111;
+}
+.listout .nav{
+	width:100%;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:0;
+	padding-left:0;
+	
 }
 nav{
-    margin-top:10px;
+    margin-top:5px;
+    float:right;
 }
-li:hover a,.presenttab{
+.shownav{
+	margin-top:0px;
+	display:block;
+	top:70px;
+	float:none;
+	clear:both;
+	position:absolute;
+	width:100%;
+	right:0;
+	padding:0;
+}
+li:hover a,.presenttab a{
+	color:#fff;
+}
+li:hover .nav,.presenttab{
     background: #031c57;
     color:#fff;
     border:0;
     border-top:2px solid #fff;
-    border-bottom:2px solid #fff;    
+    border-bottom:2px solid #fff;
+    transition: 1s background;    
+}
+#menu{
+	display:none;
+}
+#menu div{
+	width:100%;
+	height:4px;
+	background:black;
+}
+.cros,.cro{
+	transform:rotate(0deg);
+	transition: 1s transform, 1s position;
+}
+#menu .mid{
+	opacity:1;
+	position:relative;
+	transition: 1s opacity;
+	margin:7px 0;
+}
+#menu .mids{
+	transition: 1s opacity;
+	opacity:0;
+}
+#menu .cross{
+	top:12px;
+	position:absolute;
+	transform:rotate(45deg);
+	transition: 1s transform, 1s position;
+}
+#menu .crosss{
+	top:12px;
+	position:absolute;
+	transform:rotate(-45deg);
+	transition: 1s transform, 1s position;
 }
     
 /*-------------------end header style-----------------------*/
@@ -50,7 +127,7 @@ li:hover a,.presenttab{
 /**************category list style******************/
 #list-category{
     width:calc(20% - 60px);
-    height:600px;
+    height:100%;
     border-right:2px solid #dfe2db;
     padding:100px 30px 0 30px;
     position: relative;
@@ -70,6 +147,7 @@ li:hover a,.presenttab{
 
 .contrast{
     background: #dfe2db;
+    transition: 1s background;
     margin-bottom: 20px;
     display: table;
     vertical-align: middle;
@@ -97,6 +175,7 @@ li:hover a,.presenttab{
     width:21.4px;
     height: 21.4px;
     background: #dfe2db;
+    transition: 1s background;
     position: absolute;
     transform: rotate(45deg)
 }
@@ -104,18 +183,20 @@ li:hover a,.presenttab{
     display: table-cell;
     vertical-align: middle;
     color:#fff;
-    text-align: center;
+    text-align:center;
 }
 .contrast .cat{
     display: table-cell;
     vertical-align: middle;
+    padding-left:25px;
 }
 
 .contrast:hover .cat,.categorypick .cat{
     text-align: center;
     }
-.contrast:hover img ,.categorypick img{
-    display:none;
+.contrast input{
+    position:absolute;
+    top:3px;
     }
 .contrast:hover ,.contrast:hover .arrowpoint,.categorypick .arrowpoint{
         background: #031c57;
@@ -133,15 +214,36 @@ li:hover a,.presenttab{
 #theme h2{
     color: #031c57;
 }
-#theme button{
+#theme .buttonebook{
     padding:10px 0;
     min-width: 150px;
     background: #ffffff;
+    transition: 1s background;
     border-style: none;
     border: 2px solid #031c57;
+    border-left: 1px solid #031c57;
     font-weight: 500;
-    margin:5px;
-    border-radius: 20px;
+    margin:5px 0;
+    border-radius: 0 20px 20px 0;
+    cursor:pointer;
+}
+#theme .buttonedu{
+    padding:10px 0;
+    min-width: 150px;
+    background: #ffffff;
+    transition: 1s background;
+    border-style: none;
+    border: 2px solid #031c57;
+    border-right: 1px solid #031c57;
+    font-weight: 500;
+    margin:5px 0;
+    border-radius: 20px 0 0 20px;
+    cursor:pointer;
+}
+#theme button:hover{
+		background: #031c57;
+		color:#fff;
+		
 }
 #mainswitch{
     position: absolute;
@@ -151,9 +253,213 @@ li:hover a,.presenttab{
 /*---------------------------end theme style-----------------------*/
 
 /**************************collection style******************************/
+#collections{
+	width:100%;
+	height:500px;
+}
+.booksbox{
+	width:calc(33.3% - 22px);
+	margin:10px;
+	height:400px;
+	background:#f1f1f1;
+	border:1px solid #dfe2db;
+	position:relative;
+}
+.bookcover{
+	position:absolute;
+	background:black;
+	top:0;
+	height:calc(100% - 70px);
+	width:100%;
+	cursor:pointer;
+	z-index:0;
+	overflow:hidden;
+	
+	
+}
+.thumbimgs{
+	height:100%;
+}
+.bookover{
+	position:absolute;
+	top:0;
+	background:rgba(3,28,87,0.2);
+	height:100%;
+	width:100%;
+	cursor:pointer;
+	z-index:1;
+	
+	
+}
+.authorsplace{
+	position:absolute;
+	border-top:2px solid #fff;
+	bottom:0;
+	height: 50px;
+	width:100%;
+}
+.authorface{
+	height:40px;
+	width:40px;
+	border:2px solid #666;
+	margin:3px;
+	overflow:hidden;
+	border-radius:50%;
+}
+.authorname{
+	height:40px;
+	width:calc(100% - 60px);
+	margin:3px;
+	overflow:hidden;
+	border-radius:-40px 0 0 -40px;
+	display:table;
+}
+.authorname span{
+	display:table-cell;
+	vertical-align: middle;
+	font-weight:550;
+	color:#666;
+}
+.titlebar{
+	height:40px;
+	width:100%;
+	position:absolute;
+	z-index:1;
+	top:0;
+	background:rgba(241,241,241,0.6)
+}
+.titlebar div{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+.ttitle{
+	position:absolute;
+	top:10px;
+	left:5px;
+}
+.ttitlez{
+	position:absolute;
+	top:12px;
+	left:30px;
+	font-weight:500;
+}
 
 /*---------------------------end collections style-----------------------*/
 
+/**************************footer style******************************/
+
+footer{
+	height:99px;
+	border-top:1px solid #191919;
+	width:100%;
+	background:#dfe2db;
+	color:#666;
+	position:relative;
+}
+footer td{
+	padding:5px 20px;
+}
+.firsttd{
+	font-weight:700;
+	color:#666;
+}
+footer a{
+	color:#666;
+}
+#footer{
+	height:30px;
+	display:table;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	background:#031c57;
+}
+
+#footer span{
+	display:table-cell;
+	color:#fff;
+	vertical-align:middle;
+	text-align:center;
+}
+
+
+/*---------------------------end collections style-----------------------*/
+
+
+
+/**************************register form style******************************/
+.formcontain{
+	padding:10px;
+}
+.formcontain .userinput{
+	padding:10px 5px;
+	border-style:none;
+	border:1px solid #cccccc;
+	border-radius:3px;
+	margin:5px;
+	width:calc(100% - 22px);
+}
+.singleone{
+	width:50%;
+	float:left;
+}
+.grouptwo{
+	float:none;
+	clear:both;
+}
+.formcontain label{
+	font-weight:600;
+	color:#666;
+}
+.grouptwo button{
+	padding:10px 15px;
+	float:right;
+	margin-right:20px;
+	border-style:none;
+	color:#031c57;
+	border:2px solid #031c57;
+	background:#fff;
+	border-radius:20px;
+	min-width:100px;
+	text-transform:uppercase;
+	font-weight:600;
+}
+
+/*-------------------------register form style-------------------------*/
+.covercontent{
+	position:absolute;
+	top:0;
+	left:0;
+	width:50%;
+	min-height:500px;
+}
+.coverimg{
+	position:absolute;
+	top:0;
+	right:0;
+	width:50%;
+	height:500px;
+}
+.herotitle{
+	padding:5px 20px;
+}
+.jumpout{
+	position:relative;
+	min-height:500px;
+	display:none;
+	transition: 1s display,1s min-width;
+}
+.allincontent{
+	position:relative;
+}
+.jumpin{
+	position:relative;
+	min-height:500px;
+	display:block;
+	transition: 1s display,1s min-width;
+	
+}
 .lightblue{
     color:dodgerblue;
 }
@@ -167,4 +473,11 @@ li:hover a,.presenttab{
     float:none;
     clear: both;
 }
-
+.thumbimg{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+.show{
+	display:block !important;
+}

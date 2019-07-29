@@ -1,0 +1,152 @@
+@media only screen and (max-width:1200px){
+	.booksbox{
+	width:calc(50% - 22px);
+	}
+	#content{
+	height:calc(100% + 50px);
+}
+	
+	
+}
+@media only screen and (max-width:768px){
+	
+
+	/**************header style******************/
+header{
+    padding: 0 15px;
+    position:fixed;
+    z-index: 2;
+    width:100%;
+    top:0;
+    }
+.jumpin{
+	margin-top:73px;
+	min-height:500px;
+}
+	nav{
+		display:none;
+	}
+#menu{
+	display:block !important;
+	position:absolute;
+	width:40px;
+	top:20px;
+	right:40px;
+	cursor:pointer;
+	tabindex:0;
+}
+/*---------end header style-------------*/
+
+/**************category list style******************/
+
+#list-category{
+	display:none;
+}
+/*----------end category list style-------*/
+
+/**************************theme style******************************/
+#theme{
+    padding: 0 20px;
+    width:calc(100% - 40px);
+    position: relative;
+}
+#theme h2{
+   display:none;
+}
+#mainswitch{
+    position: absolute;
+    right:calc(50% - 150px);
+    top:0px
+}
+#filt{
+    position: absolute;
+    top:55px;
+}
+#theme .buttonebook{
+    padding:10px 0;
+    min-width: 150px;
+    background: #ffffff;
+    border-style: none;
+    border: 2px solid #031c57;
+    border-left: 1px solid #031c57;
+    font-weight: 500;
+    margin:5px 0;
+    border-radius: 0 20px 20px 0;
+    cursor:pointer;
+}
+#theme .buttonedu{
+    padding:10px 0;
+    min-width: 150px;
+    background: #ffffff;
+    border-style: none;
+    border: 2px solid #031c57;
+    border-right: 1px solid #031c57;
+    font-weight: 500;
+    margin:5px 0;
+    border-radius: 20px 0 0 20px;
+    cursor:pointer;
+}
+
+/*---------------- end theme style---------------*/
+
+
+/**************************collection style******************************/
+#collections{
+	width:100%;
+	margin-top:70px;
+	height:500px;
+}
+.booksbox{
+	width:calc(100% - 22px);
+	margin:10px;
+	height:400px;
+	background:#f1f1f1;
+	border:1px solid #dfe2db;
+	position:relative;
+	
+}
+/*------------------end collection style------------------*/
+	
+	
+	
+	
+/**************************other page common att style******************************/
+	.covercontent{
+	position:relative;
+	width:100%;
+	min-height:350px;
+	/*margin-bottom:170px;*/
+}
+.herotitle{
+	position:absolute;
+	width:100%;
+	height:150px;
+		top:-150px;
+	padding:0;
+	z-index:1;
+	display:table;
+	background:rgba(0,0,0,0.6);
+	text-align:center;
+}
+.coverimg{
+	position:relative;
+	width:100%;
+	height:150px;
+	
+}
+.herotitle h2{
+	display:table-cell;
+	color:white;
+	text-shadow:2px 4px 4px #000000;
+	vertical-align:middle;
+}
+
+.singleone{
+	width:100%;
+	float:none;
+}
+/**************************other page style******************************/
+	
+
+	
+}
